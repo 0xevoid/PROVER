@@ -14,7 +14,7 @@ echo "==========================================================================
 echo -e '\e[36mProject :\e[39m' ALEO PROVER TESTNET INCENTIVIZED
 echo -e '\e[36mAuthor :\e[39m' Mr.pendol
 echo -e '\e[36mTelegram Channel :\e[39m' @AHNesiaNews
-echo "======================================="
+echo "=============================================================================="
 
 sleep 2
 
