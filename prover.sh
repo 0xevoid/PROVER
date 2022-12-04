@@ -9,6 +9,7 @@ echo " ██╔████╔██║██████╔╝   ████�
 echo " ██║╚██╔╝██║██╔══██╗   ██╔═══╝ ██╔══╝  ██║╚██╗██║██║  ██║██║   ██║██║  "  
 echo " ██║ ╚═╝ ██║██║  ██║██╗██║     ███████╗██║ ╚████║██████╔╝╚██████╔╝███████╗ "
 echo " ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝     ╚══════╝╚═╝  ╚═══╝╚═════╝  ╚═════╝ ╚══════╝ "
+echo "                        Auto Installer ALEO                         ";
 echo -e "\e[0m"
 echo "==============================================================================" 
 echo -e '\e[36mProject :\e[39m' ALEO PROVER TESTNET INCENTIVIZED
@@ -16,7 +17,7 @@ echo -e '\e[36mAuthor :\e[39m' Mr.pendol
 echo -e '\e[36mTelegram Channel :\e[39m' @AHNesiaNews
 echo "=============================================================================="
 
-sleep 2
+sleep 5
 
 echo -e "\e[1m\e[32m1. Updating packages... \e[0m" && sleep 1
 # update
@@ -38,9 +39,14 @@ cd snarkOS
 ./build_ubuntu.sh
 
 echo -e "\e[1m\e[32m6. Cargo Path Install... \e[0m" && sleep 1
+apt install cargo
+curl https://sh.rustup.rs -sSf | sh
+source "$HOME/.cargo/env"
+cargo install cargo --force
 cargo install --path .
 
 echo -e "\e[1m\e[32m7. Create Account Aleo Prover... \e[0m" && sleep 1
 snarkos account new
+
 
 echo '=============== Installation Complete ===================' && sleep 1
